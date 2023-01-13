@@ -46,10 +46,10 @@ except URLError as e:
     
 streamlit.header("The active fruit load list contrains")
 #SN
-def get_fruit_load_list()
+def get_fruit_load_list():
   with my_cnx.cursor as my_cur:
-  my_cur.execute("SELECT * FROM fruit_load_list where is_active=true")    
-  return my_data_row = my_cur.fetchall()
+    my_cur.execute("SELECT * FROM fruit_load_list where is_active=true")    
+    return my_data_row = my_cur.fetchall()
 
 #add a button
 if streamlit.button('Get Fruit Load List'):
