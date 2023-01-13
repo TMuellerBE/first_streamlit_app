@@ -41,3 +41,6 @@ my_cur.execute("SELECT * FROM fruit_load_list where is_active=true")
 my_data_row = my_cur.fetchall()
 streamlit.header("The active fruit load list contrains")
 streamlit.dataframe(my_data_row)
+
+fruit_add_choice = streamlit.text_input('What fruit would you like to add?','Kiwi')
+streamlit.write('The user entered ', fruit_add_choice)
